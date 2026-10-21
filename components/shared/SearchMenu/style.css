@@ -1,0 +1,44 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-height: 46px;
+  margin: 30px 4px 28px;
+  padding: 10px 13px;
+  border: 1px solid var(--menu-border);
+  border-radius: 10px;
+  background: #0b142e;
+  color: #7e89ac;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.search-container > svg {
+  flex-shrink: 0;
+}
+
+.search-container:hover {
+  border-color: #465173;
+}
+
+.search-container:focus-within {
+  border-color: var(--purple);
+  background: #101934;
+  box-shadow: 0 0 0 3px #8951ff18;
+  color: #d1b5ff;
+}
+
+.search-container input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+}
+
+.search-container input::placeholder {
+  color: #7e89ac;
+}
