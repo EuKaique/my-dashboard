@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { colors } from "@/components/ui/colors";
+import { Menu } from "@/components/layouts/menu";
 
 export const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -17,10 +17,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
       <body
-        style={{ color: colors.neutral[100] }}
-        className={poppins.className}
+        className={`${poppins.className} text-white`}
       >
-        {children}
+        <Menu />
+        <main className="page-content">{children}</main>
       </body>
     </html>
   );

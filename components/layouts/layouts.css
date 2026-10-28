@@ -1,0 +1,8 @@
+@reference "tailwindcss";
+
+.search-container {
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply p-2;
+}
