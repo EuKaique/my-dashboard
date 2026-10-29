@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { DateMonthAndYearDropdown } from "@/components/ui/DateMonthAndYearDropdown";
+import { CustomDate } from "@/components/ui/CustomDate";
 import { AiFillEye } from "react-icons/ai";
 import { BsArrowDown } from "react-icons/bs";
 import { FaStar, FaUser } from "react-icons/fa";
@@ -138,7 +138,9 @@ export default function AllPages() {
               </div>
               <div className="flex gap-2 items-center">
                 <span>
-                  <DateMonthAndYearDropdown />
+                  <CustomDate.Root>
+                    <CustomDate.DropDown />
+                  </CustomDate.Root>
                 </span>
               </div>
             </div>
