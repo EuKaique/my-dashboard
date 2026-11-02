@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { Line } from "@/components/ui/Chart/Line";
 import { CustomDate } from "@/components/ui/CustomDate";
 import { AiFillEye } from "react-icons/ai";
 import { BsArrowDown } from "react-icons/bs";
@@ -109,9 +110,9 @@ export default function AllPages() {
       <section className="mt-8">
         <Card>
           <div className="flex w-full justify-between">
-            <div className="flex">
-              <div className="flex">
-                <div>
+            <div className="flex w-full min-w-0">
+              <div className="flex items-start w-full flex-wrap justify-between gap-4">
+                <div className="border-r border-[var(--neutral-400)]">
                   <h3 className="text-[var(--neutral-400)]">Total revenue</h3>
                   <div className="flex">
                     <div className="flex gap-2 py-2">
@@ -121,27 +122,25 @@ export default function AllPages() {
                       </span>
                     </div>
                   </div>
+                  <Line />
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex gap-2 items-center">
-                <span className="bg-[var(--primary)] w-[10px] h-[10px] rounded-xl"></span>
-                <p className="text-xs">Revenue</p>
-              </div>
-              <div className="flex gap-2 items-center">
-                <span className="bg-blue-400 w-[10px] h-[10px] rounded-xl"></span>
-                <p className="text-xs">Expenses</p>
-              </div>
-              <div className="flex gap-2 items-center">
-                <span>
-                  <CustomDate.Root>
-                    <CustomDate.DropDown />
-                  </CustomDate.Root>
-                </span>
+                <div className="flex gap-6">
+                    <div className="flex gap-2 items-center">
+                      <span className="bg-[var(--primary)] w-[10px] h-[10px] rounded-xl"></span>
+                      <p className="text-xs">Revenue</p>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <span className="bg-[#00c2ff] w-[10px] h-[10px] rounded-xl"></span>
+                      <p className="text-xs">Expenses</p>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <span>
+                        <CustomDate.Root>
+                          <CustomDate.DropDown />
+                        </CustomDate.Root>
+                      </span>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
