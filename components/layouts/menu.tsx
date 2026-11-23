@@ -22,7 +22,7 @@ const sections = [
   {
     title: "Dashboard",
     icon: RiHomeFill,
-    items: ["All pages", "Reports", "Products", "Task"],
+    items: ["All pages", "Reports"],
   },
   {
     title: "Features",

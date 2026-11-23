@@ -1,13 +1,12 @@
 ﻿"use client";
 
+import { months } from "@/constants";
 import { ResponsiveLine, type LineCustomSvgLayerProps } from "@nivo/line";
 import { useId } from "react";
 
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
 const customData = [
-  { id: "Revenue", data: [0, 10, 35, 85, 100, 125.2, 125, 140, 165, 195, 220, 230].map((y, index) => ({ x: months[index], y })) },
-  { id: "Expenses", data: [55, 65, 30, 40, 95, 100, 90, 180, 170, 105, 85, 110].map((y, index) => ({ x: months[index], y })) },
+  { id: "Revenue", data: [0, 10, 35, 85, 100, 125.2, 125, 140, 165, 195, 220, 230].map((y, index) => ({ x: months[index].slice(0, 3), y })) },
+  { id: "Expenses", data: [55, 65, 30, 40, 95, 100, 90, 180, 170, 105, 85, 110].map((y, index) => ({ x: months[index].slice(0, 3), y })) },
 ];
 
 type Series = (typeof customData)[number];
@@ -39,7 +38,7 @@ const Highlights = ({ points, innerWidth, currentPoint }: LineCustomSvgLayerProp
 const Line = () => {
   const id = useId().replace(/:/g, "");
   return (
-    <div className="h-[476px] md:w-[820px] xl:w-[1280px] bg-[#0b1533] mr-8">
+    <div className="h-full md:w-[820px] xl:w-[1280px] bg-[#0b1533] mr-8">
       <ResponsiveLine
         data={customData}
         margin={{ top: 28, right: 30, bottom: 64, left: 70 }}

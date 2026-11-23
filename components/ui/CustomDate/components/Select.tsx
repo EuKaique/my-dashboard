@@ -1,4 +1,4 @@
-import { monthLiteral } from "@/constants";
+import { months } from "@/constants";
 
 interface SelectProps {
   id: string;
@@ -20,7 +20,7 @@ export const Select = (props: SelectProps) => {
         value={props.value}
         onChange={(event) => props.setValue(Number(event.target.value))}
       >
-        {monthLiteral.map((month, index) => (
+        {months.map((month, index) => (
           <option key={index} value={index}>
             {month}
           </option>

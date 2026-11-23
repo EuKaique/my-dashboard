@@ -1,4 +1,4 @@
-import { monthLiteral } from "@/constants";
+import { months } from "@/constants";
 import { FaCalendar } from "react-icons/fa";
 
 interface LabelProps {
@@ -13,11 +13,11 @@ export const Label = (props: LabelProps) => {
     <div className="flex items-center gap-2 p-2 whitespace-nowrap">
         <FaCalendar size={14} />
         <span>
-        {monthLiteral[Number(props.initialMonth)]} {props.initialYear} -
+        {months[Number(props.initialMonth)].slice(0, 3)} {props.initialYear} -
         </span>
         <span>
         {" "}
-        {monthLiteral[Number(props.endMonth)]} {props.endYear}
+        {months[Number(props.endMonth)].slice(0, 3)} {props.endYear}
         </span>
     </div>
     )
